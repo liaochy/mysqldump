@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+                 <name>mapred.job.tracker</name>
+                 <value>goldmine.namenode65:9001</value>
+            </property>
+        <property>
+                <name>mapred.tasktracker.map.tasks.maximum</name>
+                <value>24</value>
+                <description>
+                        The maximum number of map tasks that will be run  simultaneously by a task tracker.
+                 </description>
+        </property>
+        <property>
+                <name>mapred.tasktracker.reduce.tasks.maximum</name>
+                <value>8</value>
+                <description>
+                        The maximum number of reduce tasks that will be run  simultaneously by a task tracker.
+                </description>
+        </property>
+        <property>
+                <name>mapred.output.compress</name>
+                <value>false</value>
+                <description></description>
+        </property>
+
+        <property>
+                 <name>mapred.output.compression.type</name>
+                 <value>BLOCK</value>
+                <description></description>
+        </property>
+
+        <property>
+                 <name>mapred.output.compression.codec</name>
+                 <value>com.hadoop.compression.lzo.LzoCodec</value>
+                 <description></description>
+        </property>
+
+        <property>
+                 <name>mapred.compress.map.output</name>
+                 <value>true</value>
+                 <description></description>
+        </property>
+
+        <property>
+                <name>mapred.map.output.compression.codec</name>
+                <value>com.hadoop.compression.lzo.LzoCodec</value>
+                <description></description>
+        </property>
+        <property>
+                  <name>mapred.userlog.retain.hours</name>
+                 <value>1</value>
+                 <description>The maximum time, in hours, for which the user-logs are to be
+          retained.
+                </description>
+        </property>
+        <property>
+                <name>mapred.child.java.opts</name>
+                <value>-Xmx512m</value>
+                 <description></description>
+        </property> 
+	<property>
+		<name>io.sort.factor</name>
+  		<value>50</value>
+  		<description></description>
+	</property>
+	
+	<property>
+		<name>io.sort.mb</name>
+		<value>200</value>
+		<description></description>
+	</property>
+                           
+</configuration>
